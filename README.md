@@ -17,3 +17,10 @@ Abrir http://localhost:4173.
 - `research/assets.json`: correspondencia de archivos con sus fuentes.
 
 El videobook usa el vídeo existente de Vimeo (1229566565). El correo abre el cliente de email; no hay un formulario ni un servidor de envíos. Los proyectos futuros conservan su fecha prevista. No se ha modificado el dominio ni la web original.
+
+## Actualización bilingüe
+
+- Español en `/` e inglés en `/en/`, con selector de idioma.
+- Jost alojada localmente en pesos 200, 400 y 600; licencia OFL incluida.
+- CV originales descargables en `/cv/`.
+- Polas usa inicialmente el retrato del CV. Las temporadas se añaden en `seasons` dentro de `dist/app.js` cuando estén confirmadas.
