@@ -24,3 +24,8 @@
 @media(prefers-reduced-motion:reduce) {
   .hero-cutout-image { animation: none; transform: translateX(-50%); }
 }
+@media(max-width:420px) {
+  nav { gap: 8px; }
+  nav a { font-size: 12px; }
+  nav a:before { position: absolute; left: -.65em; top: .32em; margin: 0; }
+}
