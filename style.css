@@ -29,3 +29,10 @@
   nav a { font-size: 12px; }
   nav a:before { position: absolute; left: -.65em; top: .32em; margin: 0; }
 }
+/* Let the portrait break through the caption rule. */
+.hero-cutout { padding-bottom: 110px; }
+.hero-figure { z-index: 3; }
+.hero-cutout-image { height: 148%; bottom: -105px; }
+@media(max-width:700px) {
+  .hero-cutout-image { height: 146%; bottom: -105px; }
+}
