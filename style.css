@@ -36,3 +36,10 @@
 @media(max-width:700px) {
   .hero-cutout-image { height: 146%; bottom: -105px; }
 }
+/* Anchor the cutout's lower edge exactly to the caption rule. */
+.hero-cutout .hero-caption { height: 44px; line-height: 19px; margin-top: 22px; padding-bottom: 24px; }
+.hero-cutout .hero-cutout-image { bottom: -65px; transform-origin: 50% 100%; }
+@keyframes portrait-sway {
+  0%, 100% { transform: translateX(-50%) skewX(-.4deg); }
+  50% { transform: translateX(calc(-50% + 4px)) skewX(.4deg); }
+}
