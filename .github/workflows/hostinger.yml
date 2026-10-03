@@ -1,0 +1,48 @@
+name: Prepare Hostinger deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - '.github/workflows/hostinger.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete source history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate static website
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/index.html
+          test -s dist/en/index.html
+          test -s dist/style.css
+          node --check dist/app.js
+
+      - name: Publish website files to Hostinger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Keep the deployment branch rooted at dist/, preserving its history.
+          # A regular push refuses divergent history instead of overwriting it.
+          deploy_commit="$(git subtree split --prefix=dist HEAD)"
+          git push origin "${deploy_commit}:refs/heads/hostinger"
+          echo 'Website files are ready on the hostinger branch.'
+          echo 'Hostinger must be connected to this branch to update the live website.'

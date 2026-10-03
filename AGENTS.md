@@ -8,3 +8,6 @@ Este proyecto mantiene su historial en el repositorio privado `EM-IA-J/mariola-d
 - No uses force push ni reescribas el historial sin una petición explícita.
 - No guardes credenciales, tokens, archivos `.env` ni archivos temporales en Git.
 - Mantén coherentes las versiones española (`dist/index.html`) e inglesa (`dist/en/index.html`).
+- El destino solicitado para la web es Hostinger, en marioladelope.com. Consulta `HOSTINGER.md` para la conexión y su estado; no supongas que está activa sin verificarlo en hPanel.
+- Sube los cambios a `main` en el remoto `github`; el workflow genera la rama `hostinger`. No edites ni fuerces esa rama de publicación.
+- Conserva el remoto de Sites como historial previo; no publiques allí de forma rutinaria al trabajar en la migración a Hostinger.
