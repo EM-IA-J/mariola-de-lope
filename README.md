@@ -1,5 +1,13 @@
 # Mariola de Lope
 
+## Control de versiones
+
+Repositorio privado: https://github.com/EM-IA-J/mariola-de-lope
+
+El remoto `github` conserva el código, las imágenes, los CV y el historial de cambios. El remoto `origin` se mantiene para publicar en Sites.
+
+Después de comprobar cada cambio, crea un commit y ejecuta `git push github main`. Si el proceso de publicación crea otro commit, súbelo también a GitHub. El repositorio no sincroniza cambios sin commit de forma automática.
+
 Portfolio estático en español. Inspiración visual: https://www.zendaya.com/.
 Contenido y fotografías recuperados de https://marioladelope.com/ el 2 de octubre de 2026 con autorización del propietario.
 
