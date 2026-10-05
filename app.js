@@ -3,12 +3,18 @@ const gallery=document.querySelector('#gallery');
 const lightbox=document.querySelector('#lightbox');
 const photo=document.querySelector('#lightbox-image');
 const more=document.querySelector('#load-more');
-let category='acting',shown=6,current=0;
-const groups={acting:Array.from({length:25},(_,i)=>i),polas:['cv']};
+let category='book',shown=6,current=0;
+// Galería: cada apartado lee las fotos de su carpeta en /assets (book, polas, analogico), en este orden.
+const groups={
+  book:Array.from({length:12},(_,i)=>`/assets/book/book-${String(i+1).padStart(2,'0')}.jpg`),
+  polas:['pola-01.jpg','pola-02.jpg','pola-03.jpg','pola-04.jpg'].map(f=>`/assets/polas/${f}`),
+  analog:Array.from({length:19},(_,i)=>`/assets/analogico/analogico-${String(i+1).padStart(2,'0')}.jpg`)
+};
 const seasons={}; // Add only confirmed photo seasons, e.g. cv: {es:'Verano 2026',en:'Summer 2026'}. 
-const path=i=>i==='cv'?'/assets/pola-cv.jpg':`/assets/photo-${String(i).padStart(2,'0')}.jpg`;
-function render(){gallery.replaceChildren();groups[category].slice(0,shown).forEach((n,index)=>{const button=document.createElement('button');button.setAttribute('aria-label',`${english?'Enlarge photograph':'Ampliar fotografía'} ${index+1}`);const img=document.createElement('img');img.src=path(n);img.alt=`Mariola de Lope · ${category==='polas'?'Pola':english?'Portrait':'Retrato'} ${index+1}`;img.loading='lazy';button.append(img);const season=seasons[n]?.[english?'en':'es'];if(category==='polas'&&season){const label=document.createElement('span');label.className='season';label.textContent=season;button.append(label);button.setAttribute('aria-label',button.getAttribute('aria-label')+' · '+season);}button.addEventListener('click',()=>{current=index;update();lightbox.showModal();document.body.classList.add('modal-open')});gallery.append(button)});more.hidden=shown>=groups[category].length}
-function update(){photo.src=path(groups[category][current]);photo.alt=`Mariola de Lope · ${category==='polas'?'Pola':english?'Portrait':'Retrato'} ${current+1}`;document.querySelector('#photo-count').textContent=`${String(current+1).padStart(2,'0')} / ${groups[category].length}`}
+const path=p=>p;
+const label=()=>category==='polas'?'Pola':category==='analog'?(english?'Analog':'Analógico'):(english?'Portrait':'Retrato');
+function render(){gallery.replaceChildren();groups[category].slice(0,shown).forEach((n,index)=>{const button=document.createElement('button');button.setAttribute('aria-label',`${english?'Enlarge photograph':'Ampliar fotografía'} ${index+1}`);const img=document.createElement('img');img.src=path(n);img.alt=`Mariola de Lope · ${label()} ${index+1}`;img.loading='lazy';button.append(img);const season=seasons[n]?.[english?'en':'es'];if(category==='polas'&&season){const label=document.createElement('span');label.className='season';label.textContent=season;button.append(label);button.setAttribute('aria-label',button.getAttribute('aria-label')+' · '+season);}button.addEventListener('click',()=>{current=index;update();lightbox.showModal();document.body.classList.add('modal-open')});gallery.append(button)});more.hidden=shown>=groups[category].length}
+function update(){photo.src=path(groups[category][current]);photo.alt=`Mariola de Lope · ${label()} ${current+1}`;document.querySelector('#photo-count').textContent=`${String(current+1).padStart(2,'0')} / ${groups[category].length}`}
 function move(delta){current=(current+delta+groups[category].length)%groups[category].length;update()}
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter;shown=6;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 more.addEventListener('click',()=>{shown+=12;render()});document.querySelector('#close-lightbox').addEventListener('click',()=>lightbox.close());lightbox.addEventListener('close',()=>document.body.classList.remove('modal-open'));document.querySelector('#previous-photo').addEventListener('click',()=>move(-1));document.querySelector('#next-photo').addEventListener('click',()=>move(1));lightbox.addEventListener('keydown',e=>{if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close()});

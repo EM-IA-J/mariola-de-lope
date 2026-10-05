@@ -117,3 +117,6 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 .hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{font-size:min(8.6cqw,36px)}
 .hero-wall .hero-photo-full{aspect-ratio:auto;height:calc(100svh - 275px);min-height:320px;object-position:50% 30%;border-radius:16px}
 }
+
+/* Sobre mí sin foto: el texto ocupa una sola columna. */
+.about-grid{grid-template-columns:1fr;max-width:900px}
