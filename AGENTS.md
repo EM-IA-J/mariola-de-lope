@@ -1,6 +1,6 @@
 # Control de versiones
 
-Este proyecto mantiene su historial en el repositorio privado `EM-IA-J/mariola-de-lope`.
+Este proyecto mantiene su historial en el repositorio principal `EM-IA-J/mariola-de-lope`.
 
 - Al completar cambios solicitados en la web, comprueba el resultado, crea un commit descriptivo y súbelo al remoto `github`.
 - Incluye únicamente los archivos correspondientes al trabajo realizado y conserva cualquier cambio ajeno.

@@ -8,9 +8,17 @@
 
 La rama `hostinger` es generada: no se debe editar manualmente. Conserva el historial de los archivos publicados y no incluye el código de gestión, documentación, `.git` ni la configuración de Sites. El workflow no necesita credenciales de Hostinger.
 
-## Configuración pendiente en hPanel
+## Estado verificado el 5 de octubre de 2026
 
-Esta preparación en GitHub no conecta por sí sola el alojamiento. Hay que entrar en la cuenta de Hostinger que gestiona marioladelope.com para completar lo siguiente:
+La web está publicada en https://marioladelope.com/ y https://www.marioladelope.com/. El alojamiento PHP/HTML, creado el 3 de octubre inicialmente como `seashell-octopus-604875.hostingersite.com`, ya tiene asociado el dominio principal.
+
+Se ha restablecido la conexión a `EM-IA-J/mariola-de-lope`, rama `hostinger`, destino `public_html`. hPanel confirma despliegue completado e implementación automática activada. Tras limpiar la caché de Hostinger, se verificaron HTTPS, español, `/en/`, imagen principal, CSS, JavaScript y ambos CV (HTTP 200).
+
+El fork `marioladelope/mariola-de-lope` no es el origen de producción. Sus contribuciones deben integrarse en el repositorio principal. No se ha configurado la aceptación automática de contribuciones.
+
+## Referencia para configurar la conexión
+
+La preparación en GitHub no conecta por sí sola el alojamiento. Para reconstruir la conexión desde la cuenta de Hostinger que gestiona marioladelope.com:
 
 - Comprobar el tipo de alojamiento. La integración Git funciona con webs HTML/PHP de alojamiento web o cloud; el constructor de Hostinger no admite esta integración.
 - Si la web actual utiliza el constructor, conservar una copia antes de sustituirla y preparar un sitio HTML compatible con el plan. La sustitución de la web actual está autorizada por el propietario.

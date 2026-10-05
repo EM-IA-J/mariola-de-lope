@@ -2,11 +2,11 @@
 
 ## Control de versiones
 
-Repositorio privado: https://github.com/EM-IA-J/mariola-de-lope
+Repositorio principal: https://github.com/EM-IA-J/mariola-de-lope
 
 El remoto `github` conserva el código, las imágenes, los CV y el historial de cambios. El remoto `origin` se mantiene para publicar en Sites.
 
-La publicación para Hostinger se prepara automáticamente al subir cambios de `dist/` a `main`. GitHub Actions actualiza la rama `hostinger`, lista para conectar a marioladelope.com. La conexión inicial en hPanel debe completarse antes de que el dominio se actualice automáticamente; ver [HOSTINGER.md](HOSTINGER.md).
+La publicación para Hostinger se prepara automáticamente al subir cambios de `dist/` a `main`. GitHub Actions actualiza la rama `hostinger`, conectada a marioladelope.com con implementación automática activada. Web pública y conexión verificadas el 5 de octubre de 2026; ver [HOSTINGER.md](HOSTINGER.md).
 
 Después de comprobar cada cambio, crea un commit y ejecuta `git push github main`. Si el proceso de publicación crea otro commit, súbelo también a GitHub. El repositorio no sincroniza cambios sin commit de forma automática.
 
@@ -26,7 +26,7 @@ Abrir http://localhost:4173.
 - `dist/assets/`: fotografías descargadas del sitio original.
 - `research/assets.json`: correspondencia de archivos con sus fuentes.
 
-El videobook usa el vídeo existente de Vimeo (1229566565). El correo abre el cliente de email; no hay un formulario ni un servidor de envíos. Los proyectos futuros conservan su fecha prevista. No se ha modificado el dominio ni la web original.
+El videobook usa el vídeo existente de Vimeo (1229566565). El correo abre el cliente de email; no hay un formulario ni un servidor de envíos. Los proyectos futuros conservan su fecha prevista. La nueva web ya se publica en marioladelope.com.
 
 ## Actualización bilingüe
 
