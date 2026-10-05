@@ -120,3 +120,7 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 /* Títulos de la trayectoria más pequeños. */
 .credits summary{font-size:clamp(20px,2.8vw,42px);padding:22px 0}
 @media(max-width:700px){.gallery-heading h2{font-size:12px;letter-spacing:.045em}.credits summary{font-size:4.8vw;padding:18px 0}}
+
+/* Apartado «Cortometrajes» dentro de la trayectoria, con el estilo de la etiqueta de sección. */
+.credits-group{margin:56px 0 0;padding-bottom:10px;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+@media(max-width:700px){.credits-group{margin-top:40px;font-size:12px;letter-spacing:.045em}}
