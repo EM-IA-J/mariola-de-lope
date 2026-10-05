@@ -97,3 +97,13 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
   .gallery button:nth-child(even) { margin-top: 32px; }
   .email { font-size: 5vw; }
 }
+
+/* Portada: foto horizontal con el nombre encima, sobre la pared (arriba a la izquierda).
+   Para mover el nombre: cambia top / left de .hero-name; para el tamaño, font-size (cqw = % del ancho de la foto). */
+.hero.hero-wall{min-height:auto;display:block;padding:100px 4vw 30px;overflow:visible}
+.hero-wall .hero-frame{position:relative;container-type:inline-size;border-radius:25px;overflow:hidden;background:#d8d2c6}
+.hero-wall .hero-photo-full{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.hero.hero-wall .hero-name{display:flex;flex-direction:column;position:absolute;top:9%;left:5.5%;right:auto;margin:0;pointer-events:none;color:var(--ink)}
+.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{position:static;display:block;top:auto;left:auto;right:auto;margin:0;transform:none;text-align:left;font-family:Jost,sans-serif;font-weight:200;letter-spacing:.2em;text-transform:uppercase;font-size:5.3cqw;line-height:1.15;white-space:nowrap}
+.hero.hero-wall .hero-caption{position:relative;margin-top:22px;height:auto}
+@media(max-width:700px){.hero.hero-wall{padding-top:112px}.hero-wall .hero-frame{border-radius:16px}.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{font-weight:400;letter-spacing:.16em}}
