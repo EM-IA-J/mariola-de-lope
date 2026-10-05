@@ -107,3 +107,13 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 .hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{position:static;display:block;top:auto;left:auto;right:auto;margin:0;transform:none;text-align:left;font-family:Jost,sans-serif;font-weight:200;letter-spacing:.2em;text-transform:uppercase;font-size:5.3cqw;line-height:1.15;white-space:nowrap}
 .hero.hero-wall .hero-caption{position:relative;margin-top:22px;height:auto}
 @media(max-width:700px){.hero.hero-wall{padding-top:112px}.hero-wall .hero-frame{border-radius:16px}.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{font-weight:400;letter-spacing:.16em}}
+
+/* Portada en móvil: recorte vertical de la foto que llena la pantalla, con el nombre encima de la foto. */
+.hero-wall picture{display:block}
+@media(max-width:700px){
+.hero.hero-wall{padding-top:96px}
+.hero-wall .hero-frame{display:flex;flex-direction:column;border-radius:0;overflow:visible;background:none}
+.hero.hero-wall .hero-name{position:static;order:-1;margin:0 0 14px}
+.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child{font-size:min(8.6cqw,36px)}
+.hero-wall .hero-photo-full{aspect-ratio:auto;height:calc(100svh - 275px);min-height:320px;object-position:50% 30%;border-radius:16px}
+}
