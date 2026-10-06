@@ -150,3 +150,14 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 /* Trabajos: misma cabecera que la galería, con pestañas Cine / TV / Teatro. */
 .work-heading{margin-bottom:24px}
 .credits details[hidden]{display:none}
+
+/* Galería y Trabajos: pestañas justo debajo del título también en ordenador. */
+.gallery-heading{display:block}
+.gallery-heading .filters{margin-top:22px}
+
+/* Videobook: botón «Ver en Vimeo» centrado, negro con letras blancas. */
+.video-poster .play{top:50%;bottom:auto;transform:translate(-50%,-50%);background:#111;color:#fff}
+.video-poster:hover .play{background:#000;color:#fff}
+
+/* Pie: «Hablemos» y el correo en granate. */
+footer .section-label,footer .email{color:#6e2430}
