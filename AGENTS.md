@@ -11,3 +11,4 @@ Este proyecto mantiene su historial en el repositorio principal `EM-IA-J/mariola
 - El destino solicitado para la web es Hostinger, en marioladelope.com. Consulta `HOSTINGER.md` para la conexión y su estado; no supongas que está activa sin verificarlo en hPanel.
 - Sube los cambios a `main` en el remoto `github`; el workflow genera la rama `hostinger`. No edites ni fuerces esa rama de publicación.
 - Conserva el remoto de Sites como historial previo; no publiques allí de forma rutinaria al trabajar en la migración a Hostinger.
+- Hostinger indica a los navegadores que guarden `style.css` y `app.js` 7 días. Cada vez que cambies alguno, actualiza su `?v=` en `dist/index.html` y `dist/en/index.html` para que los visitantes vean la versión nueva.
