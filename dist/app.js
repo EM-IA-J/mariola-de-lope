@@ -8,7 +8,7 @@ let category='book',shown=6,current=0;
 const groups={
   book:Array.from({length:12},(_,i)=>`/assets/book/book-${String(i+1).padStart(2,'0')}.jpg`),
   polas:['pola-01.jpg','pola-02.jpg','pola-03.jpg','pola-04.jpg'].map(f=>`/assets/polas/${f}`),
-  analog:Array.from({length:19},(_,i)=>`/assets/analogico/analogico-${String(i+1).padStart(2,'0')}.jpg`)
+  analog:[3,4,5,6,7,8,9,10,11,12,13,14,1,2,15,16,17,18,19].map(n=>`/assets/analogico/analogico-${String(n).padStart(2,'0')}.jpg`)
 };
 const seasons={}; // Add only confirmed photo seasons, e.g. cv: {es:'Verano 2026',en:'Summer 2026'}. 
 const path=p=>p;
