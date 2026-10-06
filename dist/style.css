@@ -124,3 +124,11 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 /* «MARIOLA» de Sobre mí con la misma letra y tamaño que el nombre de la portada (5,3 % del ancho de la foto). */
 .about h2.about-name{font-family:Jost,sans-serif;font-weight:200;letter-spacing:.2em;text-transform:uppercase;font-size:calc((100vw - 8vw) * .053);line-height:1.15}
 @media(max-width:700px){.about h2.about-name{font-weight:400;letter-spacing:.16em}}
+
+/* Título sutil encima de las fotos de Polas («Sept 2026»). */
+.gallery-note{margin:-12px 0 22px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;opacity:.7}
+.gallery-note[hidden]{display:none}
+@media(max-width:700px){.gallery-note{margin-top:4px;font-size:12px}}
+
+/* Nombre en letra fina también en móvil (portada y Sobre mí). */
+@media(max-width:700px){.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child,.about h2.about-name{font-weight:200}}
