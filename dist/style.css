@@ -168,3 +168,11 @@ footer .section-label,footer .email{color:#6e2430}
 /* «Trabajos» justo debajo del vídeo, con el mismo espacio que hay entre «Videobook» y el vídeo (32px). */
 #videobook.section{padding-bottom:0}
 #trabajo.section{padding-top:32px}
+
+/* Videobook justo debajo de la portada, con el mismo espacio de 32px. */
+.hero.hero-wall{padding-bottom:0}
+#videobook.section{padding-top:32px}
+
+/* Títulos de los trabajos un poco más pequeños. */
+.credits summary{font-size:clamp(16px,1.6vw,24px)}
+@media(max-width:700px){.credits summary{font-size:3.8vw}}
