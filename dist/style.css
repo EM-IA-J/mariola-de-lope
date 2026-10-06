@@ -164,3 +164,7 @@ footer .section-label,footer .email{color:#6e2430}
 
 /* Videobook: botón entre la cara y el borde derecho del fotograma, sin tapar la cara. */
 .video-poster .play{left:71%}
+
+/* «Trabajos» justo debajo del vídeo, con el mismo espacio que hay entre «Videobook» y el vídeo (32px). */
+#videobook.section{padding-bottom:0}
+#trabajo.section{padding-top:32px}
