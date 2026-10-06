@@ -6,7 +6,7 @@ const more=document.querySelector('#load-more');
 let category='book',shown=6,current=0;
 // Galería: cada apartado lee las fotos de su carpeta en /assets (book, polas, analogico), en este orden.
 const groups={
-  book:[4,10,1,9,2,3,5,6,7,8,12,11].map(n=>`/assets/book/book-${String(n).padStart(2,'0')}.jpg`),
+  book:[4,1,9,10,2,3,5,6,7,8,12,11].map(n=>`/assets/book/book-${String(n).padStart(2,'0')}.jpg`),
   polas:['pola-01.jpg','pola-02.jpg','pola-03.jpg','pola-04.jpg'].map(f=>`/assets/polas/${f}`),
   analog:[3,4,5,6,7,8,9,10,11,12,13,14,1,2,15,16,17,18,19].map(n=>`/assets/analogico/analogico-${String(n).padStart(2,'0')}.jpg`)
 };
