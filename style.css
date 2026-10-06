@@ -129,3 +129,6 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 .gallery-note{margin:-12px 0 22px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;opacity:.7}
 .gallery-note[hidden]{display:none}
 @media(max-width:700px){.gallery-note{margin-top:4px;font-size:12px}}
+
+/* Nombre en letra fina también en móvil (portada y Sobre mí). */
+@media(max-width:700px){.hero.hero-wall .hero-name>span,.hero.hero-wall .hero-name>span:first-child,.about h2.about-name{font-weight:200}}
