@@ -161,3 +161,6 @@ h2 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1.25; }
 
 /* Pie: «Hablemos» y el correo en granate. */
 footer .section-label,footer .email{color:#6e2430}
+
+/* Videobook: botón entre la cara y el borde derecho del fotograma, sin tapar la cara. */
+.video-poster .play{left:71%}
