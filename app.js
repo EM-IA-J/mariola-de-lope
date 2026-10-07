@@ -25,3 +25,5 @@ const links=[...document.querySelectorAll('nav > a')];const observer=new Interse
 const workTabs=[...document.querySelectorAll('[data-work]')];
 function showWork(cat){workTabs.forEach(t=>t.setAttribute('aria-pressed',String(t.dataset.work===cat)));document.querySelectorAll('.credits details[data-cat]').forEach(d=>{d.hidden=d.dataset.cat!==cat})}
 workTabs.forEach(t=>t.addEventListener('click',()=>showWork(t.dataset.work)));showWork('cine');
+// Videobook: al pulsar el fotograma, el vídeo de YouTube se reproduce dentro de la página.
+document.querySelectorAll('.video-poster[data-youtube]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const f=document.createElement('iframe');f.src=`https://www.youtube-nocookie.com/embed/${a.dataset.youtube}?autoplay=1&rel=0&playsinline=1`;f.title=a.getAttribute('aria-label');f.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';f.allowFullscreen=true;a.replaceWith(f)}));
