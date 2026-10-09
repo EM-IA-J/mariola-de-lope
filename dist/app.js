@@ -14,7 +14,7 @@ const seasons={}; // Add only confirmed photo seasons, e.g. cv: {es:'Verano 2026
 const path=p=>p;
 // Título pequeño encima de las fotos de un apartado (por ahora solo Polas: «Sept 2026»).
 const note=document.querySelector('#gallery-note');
-const label=()=>category==='polas'?'Pola':category==='analog'?(english?'Analog':'Analógico'):(english?'Portrait':'Retrato');
+const label=()=>category==='polas'?(english?'Polaroid':'Pola'):category==='analog'?(english?'Analogue':'Analógico'):(english?'Portrait':'Retrato');
 function render(){note.hidden=note.dataset.for!==category;gallery.replaceChildren();groups[category].slice(0,shown).forEach((n,index)=>{const button=document.createElement('button');button.setAttribute('aria-label',`${english?'Enlarge photograph':'Ampliar fotografía'} ${index+1}`);const img=document.createElement('img');img.src=path(n);img.alt=`Mariola de Lope · ${label()} ${index+1}`;img.loading='lazy';button.append(img);const season=seasons[n]?.[english?'en':'es'];if(category==='polas'&&season){const label=document.createElement('span');label.className='season';label.textContent=season;button.append(label);button.setAttribute('aria-label',button.getAttribute('aria-label')+' · '+season);}button.addEventListener('click',()=>{current=index;update();lightbox.showModal();document.body.classList.add('modal-open')});gallery.append(button)});more.hidden=shown>=groups[category].length}
 function update(){photo.src=path(groups[category][current]);photo.alt=`Mariola de Lope · ${label()} ${current+1}`;document.querySelector('#photo-count').textContent=`${String(current+1).padStart(2,'0')} / ${groups[category].length}`}
 function move(delta){current=(current+delta+groups[category].length)%groups[category].length;update()}
