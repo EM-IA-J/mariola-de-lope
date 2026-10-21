@@ -7,7 +7,7 @@ let category='polas',shown=6,current=0;
 // Polas: cada sesión lleva su fecha y lugar; la más reciente va primero y las anteriores se conservan debajo.
 // Dentro de cada sesión: planos generales, planos medios, perfiles y primeros planos.
 const polaSessions=[
-  {date:'20.10.2026 Madrid',photos:[4,2,5,6,7,8,9,10,11,12,13,14,15].map(n=>`/assets/polas/pola-2026-10-20-${String(n).padStart(2,'0')}.jpg`)}
+  {date:'20.10.2026 Madrid',photos:[4,2,5,7,8,9,10,11,12,13,14,15,16,17,6].map(n=>`/assets/polas/pola-2026-10-20-${String(n).padStart(2,'0')}.jpg`)}
 ];
 // Galería: cada apartado lee las fotos de su carpeta en /assets (polas, book, analogico), en este orden.
 const groups={
