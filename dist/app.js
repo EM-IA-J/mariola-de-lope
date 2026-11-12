@@ -8,7 +8,7 @@ let category='polas',shown=6,current=0;
 // Dentro de cada sesión: planos generales, planos medios, perfiles y primeros planos.
 const polaSessions=[
   {date:'Nov 2026',photos:[1,2].map(n=>`/assets/polas/pola-2026-11-${String(n).padStart(2,'0')}.jpg`)},
-  {date:'Oct 2026',photos:[4,2,5,7,8,9,10,11,12,13,14,15,16,17,6].map(n=>`/assets/polas/pola-2026-10-20-${String(n).padStart(2,'0')}.jpg`)}
+  {date:'Oct 2026',photos:[10,9,5,7,8,2,4,11,12,13,14,15,16,17,6].map(n=>`/assets/polas/pola-2026-10-20-${String(n).padStart(2,'0')}.jpg`)}
 ];
 // Galería: cada apartado lee las fotos de su carpeta en /assets (polas, book, analogico), en este orden.
 const groups={
